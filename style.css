@@ -1,0 +1,124 @@
+/*.container
+{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(10, 1fr);
+	grid-auto-flow: dense;/*дозволяє налаштувати потік так, 
+	що пробіли в сітці заповнюються іншими елементамі, які підходять по розміру*/
+/*}*/
+
+/*.item:nth-child(6n)
+{
+	background-color: orange;
+	grid-column: span 6;
+}
+
+.item:nth-child(8n)
+{
+	background-color: red;
+	grid-column: span 2;
+}
+
+.item:nth-child(9n)
+{
+	background-color: red;
+	grid-row: span 2;
+}
+
+.item-18
+{
+	grid-row: 5;
+	grid-column-end: -1 !important;
+}*/
+
+.gallery
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 100px);
+	grid-auto-rows: 100px;
+	grid-auto-flow: dense;
+}
+
+.item
+{
+	display: grid;
+	grid-template-columns: 1;
+	grid-template-rows: 1;
+	overflow: hidden;/*вказує, що зробити для переповненого елемента*/
+}
+
+.item img
+{
+	grid-column: 1/-1;
+	grid-row: 1/-1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;/*вказує, як буде поводити себе 
+	зображення в контейнері*/
+
+}
+
+.item__overlay
+{
+	background: rgba(0, 0, 0, 0.7);
+	grid-column: 1/-1;
+	grid-row: 1/-1;
+	position: relative;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	transition: 0.5s;
+	transform: translateY(100%);
+}
+
+.item__overlay button
+{
+	background: none;
+	border: 2px solid white;
+	border-radius: 3px;
+	color: white;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+}
+
+.item:hover .item__overlay
+{
+	transition: 0.2s;
+	transform: translateY(0);
+}
+
+.item.v2
+{
+	grid-row: span 3;
+}
+
+/*.item.v3
+{
+	grid-row: span 4;
+}
+
+.item.v4
+{
+	grid-row: span 5;
+}*/
+
+.item.h1
+{
+	grid-column: span 3;
+}
+
+.item.h2
+{
+	grid-column: span 4;
+}
+
+.item.h3
+{
+	grid-column: span 5;
+}
+
+.item.h4
+{
+	grid-column: span 6;
+}

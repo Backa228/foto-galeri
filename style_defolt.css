@@ -1,0 +1,61 @@
+/*.item
+{
+	background-color: yellow;
+	border: 2px solid black;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	font-weight: 900;
+}*/
+
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	background: linear-gradient(to right, #FFD500, #182D39);
+	padding: 50px;
+}
+
+.close
+{
+	background: none;
+	color: #FFD500;
+	border: 0;
+}
+
+.overlay
+{
+	position: fixed;
+	background: rgba(0, 0, 0, 0.7);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+	z-index: 2;/*дозволяє розмістити елемент на 
+	сторінці вище іншого елементу або перед ним*/
+}
+
+.overlay.open
+{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-inner
+{
+    background: linear-gradient(to right, #182D39, #FFD500);
+	padding: 20px;
+	width: 550px;
+
+}
+
+.overlay img
+{
+	width: 100%;
+}
+
